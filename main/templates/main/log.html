@@ -1,0 +1,28 @@
+{% extends "./base.html" %}
+
+{% block contents %}
+<body>
+<div class="row mt-5">
+    <div class="col-12">
+        <table class="table table-light">
+            <thead class="thead-light">
+                <tr>
+                    <th>question</th>
+                    <th>answer</th>
+                </tr>
+            </thead>
+            <tbody class="text-dark">
+            {% for log in pages %}
+            <tr>
+                <th>{{ log.q }}</th>
+                <th>{{ log.a }}</th>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <a class="btn btn-danger" href="{% url 'main' %}">Go Back</a>
+</div>
+
+</body>
+{% endblock %}

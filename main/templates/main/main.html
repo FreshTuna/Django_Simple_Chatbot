@@ -1,0 +1,29 @@
+{% extends "./base.html" %}
+
+{% block contents %}
+<body>
+    <div id="chat-body" class="panel panel-default">
+        <div class="panel-heading"><strong>Django ChatBot</strong></div>
+        <div id="msg-list-div" class="panel-body" style="padding-top: 20px ">
+
+            <a class="text-left response list-group-item">Hi! Ask me anything!</a>
+
+        </div>
+        <form id="chat-form" method="GET" action="{% url 'send_question' %}">
+        <div id="chat-bottom" class="input-group" style="padding-top: 20px ">
+            <input type="text" id="chat-msg" name="question_text" class="form-control"/>
+            <span class="input-group-btn">
+                <input class="btn btn-danger" value="Ask" type="submit"></input>
+            </span>
+        </div>
+        </form>
+        <div class="row mt-5">
+            <div class="col-12" style="padding-top: 5px ">
+                <a href="{% url 'send_to_log' %}">GO to Log</a>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+{% endblock %}

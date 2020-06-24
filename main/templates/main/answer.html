@@ -1,0 +1,20 @@
+{% extends "./base.html" %}
+{% block contents %}
+<div class="row mt-5">
+    <div class="col-12">
+        <label for="title">Question : {{ qs }}</label>
+    </div>
+</div>
+    <div class="row mt-5">
+        <div class="col-12" style="padding-top: 5px ">
+            <label for="title">Answer : {{ answer }}</label>
+        </div>
+    </div>
+<div class="row">
+    <div class="col-12" style="padding-top: 20px ">
+        <a class="btn btn-primary" href="{% url 'main' %}">GO back to ask</a>
+    </div>
+</div>
+
+
+{% endblock %}
